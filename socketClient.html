@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test html</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var ws = new WebSocket("ws://localhost:8000");
+	ws.onopen = function(res){
+		console.log("open socket");
+	}
+	ws.send("susu");
+	ws.onclose = function(code){
+		console.log("close socket");
+	}
+</script>
+</html>
